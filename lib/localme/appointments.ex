@@ -1,12 +1,12 @@
-defmodule Localme.Agenda do
+defmodule Localme.Appointments do
   @moduledoc """
-  The Agenda context.
+  The Appointments context.
   """
 
   import Ecto.Query, warn: false
   alias Localme.Repo
 
-  alias Localme.Agenda.Appointment
+  alias Localme.Appointments.Appointment
 
   @doc """
   Returns the list of appointments.

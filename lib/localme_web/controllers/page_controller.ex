@@ -1,7 +1,11 @@
 defmodule LocalmeWeb.PageController do
   use LocalmeWeb, :controller
 
+  alias Localme.Appointments
+
   def index(conn, _params) do
-    render(conn, "index.html")
+    appointments = Appointments.list_appointments
+
+    render(conn, "index.html", appointments: appointments)
   end
 end

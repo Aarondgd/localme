@@ -1,4 +1,4 @@
-defmodule Localme.Agenda.Appointment do
+defmodule Localme.Appointments.Appointment do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -14,7 +14,7 @@ defmodule Localme.Agenda.Appointment do
   @doc false
   def changeset(appointment, attrs) do
     appointment
-    |> cast(attrs, [:title, :start_date, :end_date, :status])
-    |> validate_required([:title, :start_date, :end_date, :status])
+    |> cast(attrs, [:title])
+    |> validate_required([:title])
   end
 end

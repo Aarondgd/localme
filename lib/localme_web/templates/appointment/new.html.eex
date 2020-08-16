@@ -1,0 +1,10 @@
+<h2>Nueva cita</h2>
+
+<%= form_for @conn, Routes.appointment_path(@conn, :create), [as: :appointment, method: :post], fn f -> %>
+  <label>
+    Titulo: <%= text_input f, :title %>
+  </label>
+
+
+  <%= submit "Crear evento" %>
+<% end %>

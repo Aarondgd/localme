@@ -17,6 +17,8 @@ defmodule LocalmeWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/new", AppointmentController, :new
+    post "/create", AppointmentController, :create
   end
 
   # Other scopes may use custom stacks.
